@@ -11,7 +11,6 @@ file_types={
     '.png':'Images',
     '.jpeg':'Images',
     '.jpg':'Images',
-    '.webp':'Images',
     '.exe':'Executable Files',
     '.apk':'Executable Files',
     '.msi':'Executable Files',
@@ -22,9 +21,6 @@ file_types={
     '.ini':'Configuration Files',
     '.hex':'Hexadecimal Files',
     '.pdf':'PDF Files',
-    '.crdownload':'Partial Downloads',
-    '.DLC':'Miscellaneous',
-    '.Curiosity':'Miscellaneous'
 }
 
 directory=r'C:\Users\'
@@ -39,4 +35,5 @@ for file in os.listdir(directory):
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
         
+
         shutil.move(os.path.join(directory,filename),os.path.join(folder_path,filename))
