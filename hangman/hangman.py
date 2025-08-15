@@ -4,12 +4,10 @@ hangman="_______\n|/     |\n|      O\n|     /|\\ \n|      /\\"
 mistakes=0
 guessed_letters=[]
 
-# reading the text file
 with open("words.txt","r") as words:
     words=words.readlines()
 words=[word.strip() for word in words]
 
-#random word from txt file
 word=random.choice(words)
 
 guess=""
@@ -54,4 +52,5 @@ while mistakes<50:
 
 if mistakes>49:
     print("you loose")
+
     print(f"the word was {word}")
